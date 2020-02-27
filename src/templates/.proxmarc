@@ -1,0 +1,14 @@
+{
+    "proxy": "https://digikeytest.digikey.com/en/testing-stuff-and-things/maker",
+    "replaceFiles": [
+        "/-/media/Designer/Video%20Library/YouTubeSlider/CSS/thumb-carousel.css",
+        "/-/media/Designer/Video%20Library/YouTubeSlider/CSS/youtubeslider.css"
+    ],
+    "externalFiles": [
+        {
+            "url": "localhost:8000/dk-style-guide/js",
+            "ext": "js"
+        }
+    ],
+    "injectAtBottom": false
+}

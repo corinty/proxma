@@ -1,0 +1,60 @@
+{
+    "name": "proxma",
+    "version": "0.1.1",
+    "description": "A little CLI that uses gulp and browsersync to inject files on to a proxied site with live reloading and style injecting",
+    "main": "src/cli.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "bin": {
+        "proxma": "bin/proxma",
+        "@corinty/proxma": "bin/proxma"
+    },
+    "keywords": [
+        "cli",
+        "local-dev",
+        "proxy",
+        "gulp",
+        "scss"
+    ],
+    "files": [
+        "bin/",
+        "src/",
+        "templates/"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "author": "Corin McHargue",
+    "license": "ISC",
+    "dependencies": {
+        "arg": "^4.1.2",
+        "autoprefixer": "^9.7.3",
+        "browser-sync": "^2.26.7",
+        "chalk": "^3.0.0",
+        "esm": "^3.2.25",
+        "execa": "^4.0.0",
+        "glob": "^7.1.6",
+        "gulp": "^4.0.2",
+        "gulp-babel": "^8.0.0",
+        "gulp-cached": "^1.1.1",
+        "gulp-changed": "^4.0.2",
+        "gulp-clean": "^0.4.0",
+        "gulp-flatten": "^0.4.0",
+        "gulp-postcss": "^8.0.0",
+        "gulp-sass": "^4.0.2",
+        "inquirer": "^7.0.4",
+        "listr": "^0.14.3",
+        "ncp": "^2.0.0",
+        "node-sass": "^4.13.0",
+        "pkg-install": "^1.0.0",
+        "qrcode": "^1.4.4",
+        "rc": "^1.2.8"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.8.3",
+        "@babel/preset-env": "^7.7.7",
+        "@babel/register": "^7.8.3",
+        "babel": "^6.23.0"
+    }
+}
