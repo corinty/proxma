@@ -1,6 +1,6 @@
 {
     "name": "proxma",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "description": "A little CLI that uses gulp and browsersync to inject files on to a proxied site with live reloading and style injecting",
     "main": "src/cli.js",
     "scripts": {
