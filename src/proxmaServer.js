@@ -3,7 +3,7 @@ const path = require("path");
 const QRCode = require("qrcode");
 const browserSync = require("browser-sync").create();
 const conf = require("rc")("proxma", {
-    injectPath: "./dist/inject/**/*",
+    injectPath: "./dist/{js,css}/**/*.{js,css}",
     externalFiles: [],
     injectAtBottom: true,
 });
@@ -19,35 +19,21 @@ function proxmaServer() {
             rule: {
                 match: conf.injectAtBottom ? /$/i : /<\/head>/i,
                 fn(snippet, match) {
-                    return filesToInject() + externalInject() + snippet + match;
+                    return filesToAdd() + externalFiles() + snippet + match;
                 },
             },
         },
         rewriteRules: filesToReplace(),
-        callbacks: {
-            /**
-             * This 'ready' callback can be used
-             * to access the Browsersync instance
-             */
-            ready: function(err, bs) {
-                // example of accessing URLS
-                // const local = bs.options.get("urls").get("external");
-                // TODO:: Add showing url for external link
-                // QRCode.toCanvas(local, { type: "terminal", width: 20 }, function(err, url) {
-                //     console.log(url);
-                // });
-            },
-        },
     });
 }
 
-function externalInject() {
+function externalFiles() {
     const { externalFiles } = conf;
     if (externalFiles.length === 0) return;
     return externalFiles.map(url => prepareLinks({ url })).join("");
 }
 
-function filesToInject() {
+function filesToAdd() {
     const files = glob.sync(conf.injectPath);
 
     if (files.length === 0) return;
@@ -58,18 +44,14 @@ function filesToInject() {
 }
 function prepareLinks({ filePath, url }) {
     const ext = path.extname(filePath || url).replace(".", "");
-    const name = path.basename(filePath || url).replace(`.${ext}`, "");
 
     switch (ext) {
-        case "scss":
         case "css":
-            return `<link rel="stylesheet" type="text/css" href="${
-                url ? url : `/dist/inject/${name}.css`
-            }"/>`;
+            return `<link rel="stylesheet" type="text/css" href="${url ||
+                filePath.replace(".", "")}"/>`;
         case "js":
-            return `<script type="text/javascript" src="${
-                url ? url : `/dist/inject/${name}.js`
-            }"></script>`;
+            return `<script type="text/javascript" src="${url ||
+                filePath.replace(".", "")}"></script>`;
         default:
             return null;
     }

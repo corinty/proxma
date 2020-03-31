@@ -1,6 +1,6 @@
 {
     "name": "proxma",
-    "version": "0.1.1",
+    "version": "0.2.1",
     "description": "A little CLI that uses gulp and browsersync to inject files on to a proxied site with live reloading and style injecting",
     "main": "src/cli.js",
     "scripts": {
@@ -30,8 +30,10 @@
     "dependencies": {
         "arg": "^4.1.2",
         "autoprefixer": "^9.7.3",
+        "boxen": "^4.2.0",
         "browser-sync": "^2.26.7",
         "chalk": "^3.0.0",
+        "chokidar": "^3.3.1",
         "esm": "^3.2.25",
         "execa": "^4.0.0",
         "glob": "^7.1.6",
@@ -55,6 +57,12 @@
         "@babel/core": "^7.8.3",
         "@babel/preset-env": "^7.7.7",
         "@babel/register": "^7.8.3",
-        "babel": "^6.23.0"
+        "babel": "^6.23.0",
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb": "^18.1.0",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-react": "^7.19.0",
+        "eslint-plugin-react-hooks": "^2.5.1"
     }
 }

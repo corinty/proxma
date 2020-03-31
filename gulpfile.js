@@ -41,8 +41,13 @@ gulp.task(
 );
 
 function processScss(filePath) {
-    const srcGlob = filePath || ["./src/**/*.{scss,css}", "!./node_modules/**/*"];
-    const fileDest = filePath ? path.dirname(filePath).replace("src", "./dist") : "dist";
+    const srcGlob = filePath || [
+        "./src/scss/**/*.scss",
+        "./src/css/**/*.css",
+        "!./node_modules/**/*",
+    ];
+
+    const fileDest = filePath ? path.dirname(filePath).replace("src", "./dist") : "dist/css";
 
     return (
         gulp

@@ -1,30 +1,27 @@
 import arg from "arg";
 import inquirer from "inquirer";
 import path from "path";
-import fs from "fs";
+import fs, { exists } from "fs";
 import chalk from "chalk";
+import boxen from "boxen";
+
+import parseArgumentsIntoOptions from "./parseArguments";
+import { validURL } from "./utils";
+import { main } from "./main";
+import { initProxma } from "./initProxma";
 const conf = require("rc")("proxma", {
     injectPath: "./dist/inject/**/*",
 });
 
-import parseArgumentsIntoOptions from "./parseArguments";
-import runGulp from "./main";
-
 export async function cli(args) {
     try {
+        // Check for .proxmarc
         if (!conf.config) {
-            throw new Error("No .proxmarc file found");
-        } else if (!conf.proxy) {
-            throw new Error("No proxy set in the .proxmarc file");
+            await initProxma();
         }
 
-        // let options = parseArgumentsIntoOptions(args);
-        // options = await promptForMissingOptions(options);
-
-        await runGulp();
+        await main();
     } catch (error) {
-        console.log("boughht to throw error");
-
         console.error(chalk.red(error));
     }
 }
