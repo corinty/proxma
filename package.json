@@ -20,7 +20,8 @@
     "files": [
         "bin/",
         "src/",
-        "templates/"
+        "templates/",
+        "gulpfile.js"
     ],
     "publishConfig": {
         "access": "public"
