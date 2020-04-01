@@ -38,7 +38,6 @@
         "chalk": "^3.0.0",
         "chokidar": "^3.3.1",
         "esm": "^3.2.25",
-        "execa": "^4.0.0",
         "glob": "^7.1.6",
         "gulp": "^4.0.2",
         "gulp-babel": "^8.0.0",
@@ -49,21 +48,11 @@
         "gulp-postcss": "^8.0.0",
         "gulp-sass": "^4.0.2",
         "inquirer": "^7.0.4",
-        "listr": "^0.14.3",
-        "ncp": "^2.0.0",
         "node-sass": "^4.13.0",
-        "pkg-install": "^1.0.0",
-        "qrcode": "^1.4.4",
         "rc": "^1.2.8"
     },
     "devDependencies": {
-        "@babel/register": "^7.8.3",
-        "babel": "^6.23.0",
         "eslint": "^6.8.0",
-        "eslint-config-airbnb": "^18.1.0",
-        "eslint-plugin-import": "^2.20.2",
-        "eslint-plugin-jsx-a11y": "^6.2.3",
-        "eslint-plugin-react": "^7.19.0",
-        "eslint-plugin-react-hooks": "^2.5.1"
+        "eslint-plugin-prettier": "^3.1.2"
     }
 }

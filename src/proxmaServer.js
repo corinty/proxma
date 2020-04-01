@@ -1,6 +1,6 @@
 const glob = require("glob");
 const path = require("path");
-const QRCode = require("qrcode");
+
 const browserSync = require("browser-sync").create();
 const conf = require("rc")("proxma", {
     injectPath: "./dist/{js,css}/**/*.{js,css}",
