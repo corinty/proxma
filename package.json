@@ -4,7 +4,6 @@
     "description": "A little CLI that uses gulp and browsersync to inject files on to a proxied site with live reloading and style injecting",
     "main": "src/cli.js",
     "scripts": {
-        "install": "npm install",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "bin": {
