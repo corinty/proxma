@@ -1,6 +1,6 @@
 {
     "name": "proxma",
-    "version": "0.2.4",
+    "version": "0.2.6",
     "description": "A little CLI that uses gulp and browsersync to inject files on to a proxied site with live reloading and style injecting",
     "main": "src/cli.js",
     "scripts": {
@@ -30,6 +30,8 @@
     "author": "Corin McHargue",
     "license": "ISC",
     "dependencies": {
+        "@babel/core": "^7.8.3",
+        "@babel/preset-env": "^7.7.7",
         "arg": "^4.1.2",
         "autoprefixer": "^9.7.3",
         "boxen": "^4.2.0",
@@ -56,8 +58,6 @@
         "rc": "^1.2.8"
     },
     "devDependencies": {
-        "@babel/core": "^7.8.3",
-        "@babel/preset-env": "^7.7.7",
         "@babel/register": "^7.8.3",
         "babel": "^6.23.0",
         "eslint": "^6.8.0",
