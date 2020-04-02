@@ -17,19 +17,13 @@ css in inspector.
 # Install/Usage
 
 ```
-npm i -d proxma
-```
-
-or
-
-```
 npm i -g proxma
 ```
 
 1. Once the package has been installed locally or globally you can run it
-    ```
-    proxma
-    ```
+```
+proxma
+```
 2. On first run it will look for the `.proxmarc` settings file. If it doesn't find one it will set
    one up for you as well as some starting folders.
 3. If the settings file is in place just run the same `proxma` command and it will run gulp and then
