@@ -48,7 +48,7 @@
         "gulp-postcss": "^8.0.0",
         "gulp-sass": "^4.0.2",
         "inquirer": "^7.0.4",
-        "node-sass": "^4.13.0",
+        "node-sass": "^7.0.0",
         "rc": "^1.2.8"
     },
     "devDependencies": {
